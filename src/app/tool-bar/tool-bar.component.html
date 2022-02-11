@@ -1,0 +1,31 @@
+<mat-toolbar>
+  <h5 style="color: whitesmoke;" > &nbsp;&nbsp;&nbsp; ANGULAR AAP </h5>
+  <span class="example-spacer"></span>
+  <button
+  style="margin-right: 3px"
+  mat-flat-button
+  routerLink="Home-Page"
+
+  [color]="color"
+  (mouseover)="color = 'primary'"
+  (mouseout)="color = 'warn'">
+
+ Home Page
+</button>
+  <button
+    style="margin-right: 3px"
+    mat-flat-button
+    routerLink="Show-Data"
+    [color]="color1"
+    (mouseover)="color1 = 'primary'"
+    (mouseout)="color1 = 'warn'">
+
+    Show Data
+  </button>
+  <button mat-flat-button routerLink="Show-Card"
+  [color]="color2"
+  (mouseover)="color2 = 'primary'"
+  (mouseout)="color2 = 'warn'">
+    Show Cards
+  </button>
+</mat-toolbar>

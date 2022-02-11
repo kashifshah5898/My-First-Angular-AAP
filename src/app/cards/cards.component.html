@@ -1,0 +1,51 @@
+<!--
+  <div  style="margin-top: 10px; border: 1px solid green;" class="container">
+
+    <div style="color: red;" *ngIf="newArr.length == 0; then thenBlock else elseBlock">
+
+      <ng-template #thenBlock >
+
+      </ng-template>
+
+      <ng-template #elseBlock>
+
+
+      <div class="container">
+         <div *ngFor="let item of newArr">
+
+         </div>
+        </div>
+    </ng-template>
+    </div>
+  </div> -->
+
+  <div class="container">
+
+    <div class="container-fluid">
+
+    <div *ngIf=" newArr.length== 0 ; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock> <h3 style="text-align: center; color: red;" >*Nothing to show</h3> </ng-template>
+    <ng-template #elseBlock>
+
+
+        <!-- <div style="border: 1px solid red;" *ngFor="let item of newArr"> -->
+          <div class="row row-list">
+          <mat-card class=" col-lg-4 example-card" *ngFor="let item of newArr" >
+
+            Name  :   {{ item.name }} <br />
+            Gender :   {{ item.gender }} <br />
+            Age   :   {{ item.age }} <br />
+          </mat-card>
+        </div>
+
+        <!-- </div> -->
+
+
+    </ng-template>
+  </div>
+</div>
+  <!-- <mat-card class="example-card col-xl-4 col-lg-4 col-sm-6" style="background-color: white; border: 1px solid black; max-width:max-content; ">
+    Name  :   {{ item.name }} <br />
+    Gender :   {{ item.gender }} <br />
+    Age   :   {{ item.age }} <br />
+  </mat-card> -->

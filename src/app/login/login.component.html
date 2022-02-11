@@ -1,0 +1,27 @@
+
+<div class="d-flex justify-content-center" >
+
+
+  <mat-card class="matCARD col text-center col-xl-4 col-lg-4 col-sm-6">
+    <h3  style="color: red;" >{{someThingWentWrong}}</h3>
+    <form [formGroup]="myLoginForm" (submit)="login()"  >
+      <u><h2>Enter Your Credentials</h2></u>
+      <b> <label >Email:</label> &nbsp; </b> <mat-form-field style="margin-top: 20px; padding : 1px solid black ; " appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="admin@gmail.com" formControlName="email" required>
+        <mat-error>Enter Your Email</mat-error>
+      </mat-form-field><br><br>
+
+      <b> Password: &nbsp;</b>  <mat-form-field  appearance="outline">
+        <mat-label>Enter your Password</mat-label>
+        <input matInput
+        type="password" formControlName="password" placeholder="123" required>
+        <mat-error>Enter Your Password</mat-error>
+      </mat-form-field><br>
+      <button type="submit" style="align-items: center; margin-top: 20px; margin-bottom: 20px;" mat-flat-button color="primary"  >Login</button>
+    </form>
+  </mat-card>
+</div>
+
+
+

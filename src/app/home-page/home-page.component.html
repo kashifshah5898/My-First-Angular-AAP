@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+  <mat-card class="matCARD col text-center col-xl-4 col-lg-4 col-sm-6">
+
+  <form [formGroup]="infoForm" (submit)="addData()"   >
+    <br>
+    <u><h2>Enter Your Details</h2></u>
+
+
+    <!-- Enter Your Name -->
+    <mat-form-field class="example-full-widths" appearance="outline">
+
+      <mat-label>Enter your name</mat-label>
+      <input matInput type="text" required formControlName="name" >
+      <mat-error>Enter Your Name</mat-error>
+
+    </mat-form-field><br><br>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Enter your Age</mat-label>
+      <input matInput type="number" required  formControlName="age" >
+      <mat-error>Enter Your Age</mat-error>
+    </mat-form-field><br><br>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your Gender</mat-label>
+      <mat-select required formControlName="gender" >
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+      </mat-select>
+      <mat-error>Select Gender</mat-error>
+    </mat-form-field><br>
+
+    <button [disabled]="infoForm.invalid" style="align-items: center; margin-top: 20px; margin-bottom: 20px;" type="submit"  mat-flat-button color="primary"
+       >Add Data</button>
+     <!-- style="align-items: center; margin-bottom: 10px; margin-left: 65px ;" -->
+  </form>
+</mat-card>
+
+</div>

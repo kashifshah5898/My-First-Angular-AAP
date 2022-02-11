@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>Data</h1>
+
+<form [formGroup]="infoFor" (submit)="update()">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>ID</mat-label>
+    <input
+      matInput
+      type="text"
+      readonly
+      formControlName="id"
+    /> </mat-form-field
+  ><br /><br />
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Enter your name</mat-label>
+    <input
+      matInput
+      type="text"
+      required
+      formControlName="name"
+    /> </mat-form-field
+  >
+  <br /><br />
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Enter your Age</mat-label>
+    <input
+      matInput
+      type="number"
+      required
+      formControlName="age"
+    /> </mat-form-field
+  ><br /><br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your Gender</mat-label>
+    <mat-select required formControlName="gender">
+      <mat-option value="Male">Male</mat-option>
+      <mat-option value="Female">Female</mat-option>
+    </mat-select> </mat-form-field
+  ><br /><br />
+
+  <div mat-dialog-actions [align]="'end'" >
+    <button type="submit" type="reset" [disabled]="infoFor.invalid" mat-flat-button color="primary" > update </button>
+    <button style="margin-left: 8px;" mat-flat-button color="warn" mat-dialog-close>Close</button>
+  </div>
+
+
+</form>
+
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->
